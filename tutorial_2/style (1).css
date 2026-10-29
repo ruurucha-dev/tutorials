@@ -1,0 +1,301 @@
+/* ===========================================
+   TUTORIAL 3: CSS GRID LAYOUT
+   
+   Your tasks:
+   1. Define the page grid on .page-layout
+   2. Assign grid-area to each section
+   3. Make .list-section items flow with Flexbox
+   4. Add mobile breakpoint under 48rem
+   =========================================== */
+
+/* External font - add your choice from Google Fonts, Inter will not be graded */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  /* Spacing scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Colors - customize these */
+  --color-bg: hsl(210, 20%, 98%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-text: hsl(210, 10%, 20%);
+  --color-text-muted: hsl(210, 10%, 50%);
+  --color-accent: hsl(220, 80%, 50%);
+  --color-border: hsla(210, 10%, 20%, 0.1);
+  
+  /* Typography */
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif; /* Change this */
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ===========================================
+   TASK 1: PAGE GRID STRUCTURE
+   Define your grid here. You need:
+   - grid-template-areas for the layout map
+   - grid-template-columns for column widths
+   - grid-template-rows for row heights
+   - min-height: 100vh to fill the viewport
+   - gap for spacing between regions
+   =========================================== */
+
+.page-layout {
+  display: grid;
+  /* YOUR CODE: grid-template-areas */
+  /* YOUR CODE: grid-template-columns */
+  /* YOUR CODE: grid-template-rows */
+  min-height: 100vh;
+  flex-direction: row;
+  gap: var(--spacing-md);
+}
+
+/* ===========================================
+   TASK 2: ASSIGN GRID AREAS
+   
+   Connect each section to its named area
+   =========================================== */
+
+.site-header {
+  /* YOUR CODE: grid-area */
+  background: var(--color-surface);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-section {
+  /* YOUR CODE: grid-area */
+  padding: var(--spacing-xl);
+}
+
+.list-section {
+  /* YOUR CODE: grid-area */
+  padding: var(--spacing-lg);
+}
+
+.site-footer {
+  /* YOUR CODE: grid-area */
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding: var(--spacing-lg);
+  /* NOTE: Footer should not exceed main content width */
+}
+
+/* ===========================================
+   TASK 3: FLEXBOX FOR COMPONENTS
+   
+   Use Flexbox to arrange items WITHIN grid regions
+   =========================================== */
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+}
+
+/* Make list items flow horizontally on large screens */
+.list-section {
+  display: flex;
+  gap: var (--spacing-md);
+
+  /* YOUR CODE: display flex, gap, wrap behavior */
+}
+
+.list-item {
+  background: var(--color-surface);
+  padding: var(--spacing-lg);
+  gap: 16px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+   /* similar to figma?? */
+  /* YOUR CODE: flex-basis or width for sizing */
+}
+
+.main-content {
+   display: flex;
+   align-items: flex-start;
+   gap: 24px;
+   align-self: stretch;  
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.title-date{
+  display: flex;
+  width: 87px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.author{
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.text{
+  flex: 1 0 0;
+  height: fit-content;
+}
+
+.engagement-bar{
+  display: flex;
+  padding: 0 24px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.engagement-metric{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.component-intermediate{
+  display: flex;
+  width: 471px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.component-intermediate{
+  border-radius: 10px;
+  background: #FFF;
+}
+
+.profile-img{
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 24px;
+}
+
+/* ===========================================
+   TASK 4: RESPONSIVE BREAKPOINT
+   
+   Under 48rem:
+   - Stack all grid regions vertically
+   - List items should stack vertically too
+   =========================================== */
+
+@media (max-width: 48rem) {
+  .page-layout {
+    grid-template-areas: var(--spacing-sm);
+
+    /* YOUR CODE: redefine grid-template-areas */
+    /* YOUR CODE: single column layout */
+  }
+  
+  .list-section {
+    flex-direction: column;
+    /* YOUR CODE: change flex-direction if needed */
+  }
+  
+  .list-item {
+    width: 100vw;/* YOUR CODE: full width on mobile */
+  }
+}
+
+/* ===========================================
+   TYPOGRAPHY (provided)
+   =========================================== */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h2{
+  color: #1E1E1E;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+h3{
+  color: #1E1E1E;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+h4{
+  color: #1E1E1E;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+h5{
+  color: #1E1E1E;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
