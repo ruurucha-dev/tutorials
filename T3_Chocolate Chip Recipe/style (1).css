@@ -1,0 +1,135 @@
+/* INTENTIONALLY UGLY STARTER STYLES */
+/* These styles are very, very ugly. */
+/* Time to make them attractive, legible, and usable */
+
+@import url('https://fonts.googleapis.com/css2?family=Racing Sans One');
+@import url('https://fonts.googleapis.com/css2?family=Geist Pixel');
+
+:root {
+  /* Spacing scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+body {
+    font-family: Geist Pixel;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-container {
+    background-color: #FFDD00;
+    margin: 10px;
+    padding: 12px;
+}
+
+.recipe-header {
+    text-align: center;
+}
+
+.recipe-title {
+    color: #0033DC;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    font-family: Racing Sans One;
+}
+
+.title-font{
+    font-family: Racing Sans One;
+    letter-spacing: 0.5px;
+    font-size: xx-large;
+    color: white;
+}
+
+.recipe-meta {
+    width: 450px;
+    font-size: large;
+    font-family: Geist Pixel;
+    color: white;
+}
+
+.intro-details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+.description-and-prep-time{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: 0px;
+    background-color: #0033DC;
+}
+
+.recipe-description {
+    font-size: 20px;
+    font-family: Geist Pixel;
+    color: white;
+    display: flex;
+    width: 500px;
+}
+
+.ingredients-section {
+    background-color: #0033DC;
+    padding: 8px;
+    border: 4px solid black;
+}
+
+.ingredients-list {
+    background-color: #FF8200;
+    list-style:none;
+    color: #FFDD00;
+    font-size: large;
+    padding: 8px;
+}
+
+.ingredients-list li {
+    margin: 2px;
+    padding: 1px;
+}
+
+.instructions-section {
+    background-color: #0033DC;
+    border: 4px solid black;
+    padding: 8px;
+}
+
+.instruction-step {
+    margin: 3px;
+    color: black;
+    font-size: large;
+}
+
+.recipe-footer {
+    background-color: #FF8200;
+    text-align: center;
+    font-size: medium;
+    padding: 16px;
+    border: 3px solid black;
+}
+
+.recipe-image {
+    width: fit-content;
+    flex-shrink: calc();
+    height: 400px;
+}
+
+* {
+    margin: 2px;
+    padding: 1px;
+}
+
+.text-on-blue{
+    font-size: 32px;
+    color: white;
+}
+
+.instructions-list{
+    background-color: #FF8200;
+    padding-left: 2%;
+}
