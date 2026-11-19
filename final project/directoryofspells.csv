@@ -1,0 +1,21 @@
+d,Spell name,Description,Color,Gesture?
+1,Mirabel,Summons an object,Soft gold,
+2,Kindelo,small explosion,Orange-white,
+3,Auvelle,reveals secret passage,Pale teal,
+4,Lumenor,conjures a ghost,Ghostly blue-white,
+5,Ignari,conjures flames,Deep red-orange,"Cup your hand, and then move fingers individually"
+6,Aeris,makes objects fly,Sky blue,keep palm open horizontally and move fingers individually
+7,Obscura,creates a smokescreen,Charcoal gray,
+8,Misel,condensation on screen,Frosted silver,
+9,Restora,fixes broken object,Warm green,
+10,Sylphine,levitates object,Lavender,
+11,Aquilla,water making spell?,Deep ocean blue,
+12,Trovella,conjures chests,Rich brown with gold sparks,Draw a rectangle in the air with both index fingers
+13,Aperion,opens/unlocks chests,Bright brass,Open your index finder and thumb across from each other and turn from vertical axis to horizontal axis
+14,Elusar,turns you invisible,Radiant gold,"Wave your hand with palm open, twice"
+15,Dilatha,Shrinks or enlarges an object,Warm white-yellow,Pinch fingers in zoom in or zoom out gesture
+16,Verdanya,instantly grows plants or vines,Icy cyan,Cup your hand in a tear drop shape and open slowly
+17,Wanderel,transports you to another city,Electric violet,Spin your index finger in circular motion
+18,Florenne,blooms a flower,Translucent silver,Close and then open first slowly
+19,Slumbaria,closes the flower,Deep indigo,"Cup a closed fist at chest height, then open the fingers slowly like petals"
+20,Emerald green,"Open hand, then slowly curl the fingers closed into a fist"
